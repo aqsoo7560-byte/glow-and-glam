@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background: #fff;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 2px solid #d11a5b;
+    }
+
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #d11a5b;
+    }
+
+    .contact-box {
+        max-width: 500px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 { color: #d11a5b; text-align: center; }
+
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background: #d11a5b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    /* Hover effect lazmi chale ga ab */
+    .submit-btn:hover {
+        background: #a0144d !important;
+    }
+
+    /* Mobile view ke liye */
+    @media (max-width: 768px) {
+        header {
+            display: flex !important;
+            flex-direction: column !important;
+            padding: 15px 0 !important;
+        }
+
+        nav {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 12px !important;
+            margin-top: 15px !important;
+        }
+
+        nav a {
+            margin: 0 !important;
+            font-size: 15px !important;
+        }
+
+        .contact-box {
+            width: 90% !important;
+            margin: 20px auto !important;
+        }
+    }
+        
+    
+    
+      
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="reviews.html">PRODUCT REVIEWS</a>
+        <a href="skincare.html">SKINCARE TIPS</a>
+        <a href="contact.html" style="color: #d11a5b;">CONTACT US</a>
+    </nav>
+</header>
+
+<div class="contact-box">
+    <h2>Contact Us</h2>
+    <p style="text-align: center; color: #666;">Have questions? Feel free to reach out!</p>
+    
+    <form>
+        <label>Full Name</label>
+        <input type="text" class="input-field" placeholder="Enter your name">
+        
+        <label>Email Address</label>
+        <input type="email" class="input-field" placeholder="Enter your email">
+        
+        <label>Message</label>
+        <textarea class="input-field" rows="5" placeholder="Write your message here..."></textarea>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</div>
+   <footer>
+        <p>&copy; 2026 Glow & Glam Beauty Blog. All Rights Reserved.</p>
+        <p>Follow us for more beauty updates!</p>
+    </footer>
+
+</body>
+</html>

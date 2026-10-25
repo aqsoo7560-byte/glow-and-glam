@@ -1,0 +1,251 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #fffafb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background: #ffffff;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #e91e63;
+}
+
+.logo span {
+    color: #222;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e91e63;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=1200') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    background: #e91e63;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #c2185b;
+    transform: scale(1.05);
+}
+
+/* Blog Section */
+main {
+    padding: 60px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #e91e63;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.category {
+    color: #e91e63;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card-content h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 2px solid #e91e63;
+    transition: 0.2s;
+}
+
+.read-more:hover {
+    background: #e91e63;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px;
+    background: #1a1a1a;
+    color: #999;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+/* 1. Pehle normal styling (Laptop ke liye) */
+.hero {
+    display: flex;
+    font-size: 30px;
+}
+
+.blog-grid {
+    display: flex;
+    gap: 20px;
+}
+
+/* ------------------------------------------------ */
+/* 2. Sab se niche Media Query (Mobile ke liye)    */
+/* ------------------------------------------------ */
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        font-size: 22px; /* Yahan !important ki zaroorat nahi */
+    }
+
+    .blog-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+    /* Logo aur Nav ko upar neeche karne ke liye */
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    /* Menu links ko ek line ke bajaye upar neeche lane ke liye */
+    nav ul {
+        flex-direction: column; 
+        padding: 0;
+        margin-top: 10px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 8px 0; /* Links ke darmiyan thora gap */
+    }
+
+    /* Hero text ka size thora chota karein taake mobile screen par fit aaye */
+    .hero-banner h1, h1 {
+        font-size: 22px !important;
+        padding: 0 10px;
+    }
+}
